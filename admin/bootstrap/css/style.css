@@ -1,0 +1,210 @@
+:root {
+  --accent-color: #c4a466;
+}
+
+body {
+  background: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0) -100%,
+      rgba(45, 45, 45, 1) 100%
+    ),
+    url(../../images/index.jpg) no-repeat center center fixed;
+  background-attachment: fixed;
+  background-size: cover !important;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-width: 100vw;
+  min-width: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+  height: 100vh;
+}
+
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  width: 100vw;
+  width: -webkit-fill-available;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Apply the accent color to specific elements */
+.btn-primary,
+.navbar,
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.navbar {
+  background-color: #4a6345;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+.breadcrumb-chevron {
+  --bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  gap: 0.5rem;
+}
+.breadcrumb-chevron .breadcrumb-item {
+  display: flex;
+  gap: inherit;
+  align-items: center;
+  padding-left: 0;
+  line-height: 1;
+}
+.breadcrumb-chevron .breadcrumb-item::before {
+  gap: inherit;
+  float: none;
+  width: 1rem;
+  height: 1rem;
+}
+
+.breadcrumb-custom .breadcrumb-item {
+  position: relative;
+  flex-grow: 1;
+  padding: 0.75rem 3rem;
+}
+.breadcrumb-custom .breadcrumb-item::before {
+  display: none;
+}
+.breadcrumb-custom .breadcrumb-item::after {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  z-index: 1;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  content: "";
+  background-color: var(--bs-tertiary-bg);
+  border-top-right-radius: 0.5rem;
+  box-shadow: 1px -1px var(--bs-border-color);
+  transform: scale(0.707) rotate(45deg);
+}
+.breadcrumb-custom .breadcrumb-item:first-child {
+  padding-left: 1.5rem;
+}
+.breadcrumb-custom .breadcrumb-item:last-child {
+  padding-right: 1.5rem;
+}
+.breadcrumb-custom .breadcrumb-item:last-child::after {
+  display: none;
+}
+
+.card {
+  border-radius: 4px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  font-weight: 600;
+}
+
+.card img {
+  position: absolute;
+  max-height: 120px;
+}
+
+.card-1 {
+  background-repeat: no-repeat;
+  background-size: 80px;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.message-container {
+  height: 400px; /* Set the desired height for the container */
+  overflow-y: scroll; /* Add vertical scroll when content exceeds the height */
+}
+
+.jGrowl-notification {
+  font-size: 14px; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: black;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (change this value based on your video's aspect ratio) */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.submit-container {
+  margin-top: 20px;
+}
+
+.submit-container .btn {
+  margin-right: 10px;
+}
+
+.progress {
+ position: relative;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip .tooltip-inner {
+  background-color: #00d0ff; /* Replace with your desired background color */
+}
+
+@media (max-width: 767px) {
+  .container.d-flex.flex-wrap > .container {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    max-width: 0 !important;
+  }
+}
